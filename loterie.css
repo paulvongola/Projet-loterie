@@ -1,0 +1,151 @@
+body{
+    text-align: center;
+    margin:0;
+    min-height: 100vh; /*On spécifie la hatueur minimale*/
+    background-image:url(https://images.pexels.com/photos/131616/pexels-photo-131616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+    background-size: cover;
+    animation-name: back;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Pour donner l'effet de mouvement*/
+@keyframes back{
+    0%{
+        background-size: 100% auto;
+    }
+    50%{
+        background-size: 120% auto;
+    }
+    100%{
+        background-size: 100% auto;
+    }
+}
+
+
+h1{
+    margin:0;
+    padding: 20px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+    color:#EA2;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#grille{
+    margin-top: 50px;
+}
+
+#grille input{
+    width: 60px;
+    height: 40px;
+    font-size: 14pt;
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
+    border:solid 1px #AAA;
+    color: #FFF;
+    margin: 4px 2px;
+    transition: all 0.3s ease;
+}
+
+/* Survol du bouton*/
+#grille input:hover{
+    transform:scale(1.2);
+    color:#000;
+    background-color: #AAA;
+    transition: all 0.3s ease;
+
+}
+
+/* Pour styliser le bouton "jouer" */
+input[type="submit"]{
+    width: 200px;
+    height: 40px;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: #EA2;
+    border:solid 1px #EA2;
+    color:#000;
+    display: inline-block;
+    margin: 4px 2px;
+    visibility: hidden; /* On utilise cette propriété pour cacher le bouton "jouer" tant que l'utilisateur n'a pas choisi 6nums*/
+}
+/* Au survol, un fond gris apparait pour les cases*/
+input[type="submit"]:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    color:#FFF;
+}
+
+/* Pour le bouton jouer, le positionne proprement*/
+#selection{
+    margin: 20px;
+}
+
+
+#selection input{
+    width: 60px;
+    height: 40px;
+    font-size: 14pt;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: solid 1px #EA2;
+    color: #EA2;
+    display: inline-block;
+    margin: 4px 2px;
+}
+
+
+/* Pour la partie tirage.php */
+
+h2{
+    margin-top: 60px;
+    color: white;
+}
+
+.numeros{
+    display: inline-block;
+    border:solid 1px #AAA;
+    box-sizing: border-box;
+    width: 100px;
+    padding: 20px;
+    font-size: 24pt;
+    color: #EA2;
+    margin:6px;
+
+}
+
+#resultat{
+    font-size: 24pt;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    visibility: hidden; /* On s'en sert car on veut masqué la résultat jusqu'à les 6 nombres soient générer*/
+}
+
+#resultat span{
+ color:#EA2;   
+}
+
+
+/* La partie pour le bouton recommencer*/
+
+button{
+    width: 200px;
+    height: 40px;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: #EA2;
+    border:solid 1px #EA2;
+    color:#000;
+    display: inline-block;
+    margin: 4px 2px;
+}
+
+button:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    color:#FFF;
+}
